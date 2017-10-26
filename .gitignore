@@ -4,3 +4,31 @@
 erl_crash.dump
 *.ez
 *.beam
+
+# App artifacts
+/backend/checkers/_build
+/backend/checkers/db
+/backend/checkers/deps
+/backend/checkers/*.ez
+
+# Generated on crash by the VM
+/backend/checkerserl_crash.dump
+
+# Generated on crash by NPM
+/backend/checkersnpm-debug.log
+
+# Static artifacts
+/backend/checkers/assets/node_modules
+
+# Since we are building assets from assets/,
+# we ignore priv/static. You may want to comment
+# this depending on your deployment strategy.
+/backend/checkers/priv/static/
+
+# Files matching config/*.secret.exs pattern contain sensitive
+# data and you should not commit them into version control.
+#
+# Alternatively, you may comment the line below and commit the
+# secrets files as long as you replace their contents by environment
+# variables.
+/backend/checkers/config/*.secret.exs
