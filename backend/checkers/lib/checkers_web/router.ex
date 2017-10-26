@@ -20,7 +20,9 @@ defmodule CheckersWeb.Router do
   end
 
   # Other scopes may use custom stacks.
-  # scope "/api", CheckersWeb do
-  #   pipe_through :api
-  # end
+  scope "/api", CheckersWeb do
+    pipe_through :api
+  
+    get "/version", VersionController, :get_version
+  end
 end
